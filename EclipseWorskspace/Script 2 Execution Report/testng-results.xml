@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24863" started-at="2016-11-17T23:50:01Z" finished-at="2016-11-17T23:50:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24863" started-at="2016-11-17T23:50:01Z" finished-at="2016-11-17T23:50:26Z">
+      <class name="rbShoeAutomation.EmailVerification">
+        <test-method status="PASS" signature="initiate()[pri:0, instance:rbShoeAutomation.EmailVerification@39f790]" name="initiate" is-config="true" duration-ms="13847" started-at="2016-11-17T18:50:01Z" finished-at="2016-11-17T18:50:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiate -->
+        <test-method status="PASS" signature="verifyEmail()[pri:0, instance:rbShoeAutomation.EmailVerification@39f790]" name="verifyEmail" duration-ms="9790" started-at="2016-11-17T18:50:15Z" finished-at="2016-11-17T18:50:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmail -->
+        <test-method status="PASS" signature="testEnd()[pri:0, instance:rbShoeAutomation.EmailVerification@39f790]" name="testEnd" is-config="true" duration-ms="1175" started-at="2016-11-17T18:50:25Z" finished-at="2016-11-17T18:50:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEnd -->
+      </class> <!-- rbShoeAutomation.EmailVerification -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

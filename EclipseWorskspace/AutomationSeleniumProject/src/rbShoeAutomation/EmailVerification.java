@@ -12,11 +12,11 @@ import rbShoeUtil.Util;
 
 public class EmailVerification extends Util{
 	
-	private Util utilMethods = null;
+	private Util utilMethods = new Util();
 	
 	@BeforeClass
 	public void initiate(){
-		utilMethods.setDriver("IE");
+		utilMethods.setDriver("firefox");
 	}
 	
 	@Test

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="49040" started-at="2016-11-17T23:47:58Z" finished-at="2016-11-17T23:48:47Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="49040" started-at="2016-11-17T23:47:58Z" finished-at="2016-11-17T23:48:47Z">
+      <class name="rbShoeAutomation.MonthVerification">
+        <test-method status="PASS" signature="initiate()[pri:0, instance:rbShoeAutomation.MonthVerification@39f790]" name="initiate" is-config="true" duration-ms="20689" started-at="2016-11-17T18:47:58Z" finished-at="2016-11-17T18:48:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiate -->
+        <test-method status="PASS" signature="verifyMonth()[pri:0, instance:rbShoeAutomation.MonthVerification@39f790]" name="verifyMonth" duration-ms="26746" started-at="2016-11-17T18:48:19Z" finished-at="2016-11-17T18:48:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMonth -->
+        <test-method status="PASS" signature="testEnd()[pri:0, instance:rbShoeAutomation.MonthVerification@39f790]" name="testEnd" is-config="true" duration-ms="1563" started-at="2016-11-17T18:48:46Z" finished-at="2016-11-17T18:48:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEnd -->
+      </class> <!-- rbShoeAutomation.MonthVerification -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

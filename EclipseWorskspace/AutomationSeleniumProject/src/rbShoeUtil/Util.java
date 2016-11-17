@@ -6,8 +6,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Util {
 
-	WebDriver driver = null;
-	String browserName = null;
+	WebDriver driver;
+	
 	String URL = "https://rb-shoe-store.herokuapp.com/";
 	String emailID = "test@gmail.com";
 	
@@ -24,7 +24,7 @@ public class Util {
 		return driver;
 	}
 	
-	public void setDriver(String broserName) {
+	public void setDriver(String browserName) {
 		
 		if(browserName.equalsIgnoreCase("IE")){
 			this.driver = new InternetExplorerDriver();
@@ -34,14 +34,4 @@ public class Util {
 		
 		
 	}
-	public String getBrowserName() {
-		return browserName;
-	}
-	public void setBrowserName(String browserName) {
-		this.browserName = browserName;
-	}
-	
-	
-	
-	
 }
