@@ -8,7 +8,18 @@ public class Util {
 
 	WebDriver driver = null;
 	String browserName = null;
+	String URL = "https://rb-shoe-store.herokuapp.com/";
+	String emailID = "test@gmail.com";
 	
+	public String getEmailID() {
+		return emailID;
+	}
+	public void setEmailID(String emailID) {
+		this.emailID = emailID;
+	}
+	public String getURL() {
+		return URL;
+	}
 	public WebDriver getDriver() {
 		return driver;
 	}
