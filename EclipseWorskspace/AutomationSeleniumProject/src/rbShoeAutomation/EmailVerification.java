@@ -7,11 +7,16 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import rbShoeUtil.Util;
 
 public class EmailVerification extends Util{
-	
+
+	private static final Logger logger = Logger.getLogger(EmailVerification.class.getName());
 	private Util utilMethods = new Util();
 	
 	@BeforeClass
@@ -33,14 +38,15 @@ public class EmailVerification extends Util{
 			ele.sendKeys(utilMethods.getEmailID());
 			WebElement submit = driver.findElement(By.id("remind_email_submit"));
 			submit.click();
-			Thread.sleep(3000);
-			WebElement confirmText = driver.findElement(By.xpath("//div[@id='flash']/div"));
+			WebDriverWait wait = new WebDriverWait(driver, 10); // 10 seconds timeout
+			WebElement confirmText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='flash']/div")));
 			
 			Assert.assertTrue(confirmText.getText().contains("Thanks! We will notify you of our new shoes at this email: "+utilMethods.getEmailID()));
 			
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			logger.log(Level.SEVERE, "Exception occurred during email verification", e);
+			Assert.fail("Exception occurred during email verification. " + e.getMessage());
 		}
 
 	}

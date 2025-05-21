@@ -7,11 +7,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import rbShoeUtil.Util;
 
 public class MonthVerification extends Util{
-	
+
+	private static final Logger logger = Logger.getLogger(MonthVerification.class.getName());
 	private Util utilMethods = new Util();
 	
 	@BeforeClass
@@ -39,7 +42,8 @@ public class MonthVerification extends Util{
 				Assert.assertTrue(driver.getPageSource().contains(month[i]+"'s Shoes"), month[i]+" Page successfully loaded");
 				
 			} catch (Exception e) {
-				// TODO: handle exception
+				logger.log(Level.SEVERE, "Exception occurred while verifying month: " + month[i], e);
+				Assert.fail("Exception occurred while verifying month: " + month[i] + ". " + e.getMessage());
 			}
 		}
 	}

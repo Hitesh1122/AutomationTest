@@ -6,7 +6,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Util {
 
-	WebDriver driver;
+	private WebDriver driver;
 	//Comment2
 	
 	String URL = "https://rb-shoe-store.herokuapp.com/";
@@ -25,6 +25,8 @@ public class Util {
 		return driver;
 	}
 	
+	// TODO: Consider using a WebDriverManager library for automatic driver setup
+	// or enhance this method to support more browsers and configurations (e.g., headless, options).
 	public void setDriver(String browserName) {
 		
 		if(browserName.equalsIgnoreCase("IE")){
